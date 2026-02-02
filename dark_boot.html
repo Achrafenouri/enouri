@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkShield | Smart Security Scanner</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #020617;
+  --card: rgba(15,23,42,0.6);
+  --neon: #34ffd2;
+  --neon2:#22d3ee;
+  --text:#e5e7eb;
+  --muted:#94a3b8;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at top, #020617, #000);
+  color: var(--text);
+  overflow-x:hidden;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  position:relative;
+  padding:40px 20px;
+}
+
+.hero h1 {
+  font-family:"Orbitron", sans-serif;
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight:800;
+  background: linear-gradient(90deg,var(--neon),var(--neon2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  letter-spacing:2px;
+  animation: glow 3s infinite alternate;
+}
+
+.hero p {
+  margin-top:18px;
+  color:var(--muted);
+  font-size:1.1rem;
+}
+
+.hero .buttons {
+  margin-top:35px;
+  display:flex;
+  gap:18px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.btn {
+  padding:15px 34px;
+  border-radius:14px;
+  border:1px solid var(--neon);
+  background:transparent;
+  color:white;
+  cursor:pointer;
+  font-size:1rem;
+  transition:.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.btn.primary {
+  background:linear-gradient(90deg,var(--neon),var(--neon2));
+  color:black;
+  border:none;
+  font-weight:600;
+}
+
+.btn:hover {
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 0 20px var(--neon);
+}
+
+/* ===== GLOW ORB ===== */
+
+.orb {
+  position:absolute;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,var(--neon),transparent 70%);
+  filter:blur(120px);
+  opacity:0.18;
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+/* ===== FEATURES ===== */
+
+.features {
+  max-width:1200px;
+  margin:auto;
+  padding:100px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:28px;
+}
+
+.card {
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(148,163,184,0.15);
+  border-radius:22px;
+  padding:28px;
+  transition:.4s;
+  box-shadow:0 0 20px rgba(0,0,0,.4);
+}
+
+.card:hover {
+  transform:translateY(-10px) scale(1.02);
+  box-shadow:0 0 35px rgba(52,255,210,.25);
+  border-color:var(--neon);
+}
+
+.card h3 {
+  margin-top:14px;
+  font-family:"Orbitron";
+}
+
+.card p {
+  margin-top:10px;
+  color:var(--muted);
+  font-size:.95rem;
+}
+
+/* ===== CTA ===== */
+
+.cta {
+  padding:120px 20px;
+  text-align:center;
+}
+
+.cta h2 {
+  font-family:"Orbitron";
+  font-size:2.6rem;
+}
+
+.cta p {
+  margin-top:15px;
+  color:var(--muted);
+}
+
+/* ===== ANIMATIONS ===== */
+
+@keyframes glow {
+  from { text-shadow:0 0 10px #22d3ee; }
+  to { text-shadow:0 0 35px #34ffd2; }
+}
+
+@keyframes float {
+  from { transform:translateY(0); }
+  to { transform:translateY(-40px); }
+}
+
+/* ===== SCROLL ANIMATION ===== */
+
+.reveal {
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active {
+  opacity:1;
+  transform:none;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+  <div class="orb"></div>
+  <div>
+    <h1>DarkShield</h1>
+    <p>Smart Automated Cyber Security Scanning Platform</p>
+    <p>Scan your website • Detect threats • Generate professional reports</p>
+
+    <div class="buttons">
+      <button class="btn primary">Start Free Scan</button>
+      <button class="btn">View Demo Report</button>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="card reveal">
+    <h3>⚡ Live Scanning</h3>
+    <p>Active vulnerability detection using automated engines and smart probes.</p>
+  </div>
+  <div class="card reveal">
+    <h3>🛡️ Threat Score</h3>
+    <p>Real risk evaluation with professional cyber-security grading.</p>
+  </div>
+  <div class="card reveal">
+    <h3>📄 PDF Reports</h3>
+    <p>Download professional reports ready for companies and audits.</p>
+  </div>
+  <div class="card reveal">
+    <h3>🔁 Continuous Protection</h3>
+    <p>Scheduled scans, early alerts, and historical tracking.</p>
+  </div>
+</section>
+
+<section class="cta">
+  <h2 class="reveal">Turn fear into control.</h2>
+  <p class="reveal">Professional cyber security scanning built for serious website owners.</p>
+  <br>
+  <button class="btn primary reveal">Launch First Scan</button>
+</section>
+
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 80){
+      el.classList.add("active");
+    }
+  });
+});
+</script>
+
+</body>
+</html>
